@@ -102,7 +102,7 @@ body {
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
 }
-  height: auto;
+
 .valentine-btn:hover {
   transform: translateY(-2px) scale(1.03);
   display: block;
