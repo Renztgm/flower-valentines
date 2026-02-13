@@ -50,11 +50,12 @@ body {
   pointer-events: none;
   transform: translateY(2vmin) scale(0.98);
   transition: opacity 1.2s ease, transform 1.2s ease;
-  z-index: 30;
+  z-index: 1200;
 }
 .valentine-message.is-visible {
   opacity: 1;
   transform: translateY(0) scale(1);
+  pointer-events: auto;
 }
 .valentine-message__card {
   font-family: "Playfair Display", "Times New Roman", serif;
