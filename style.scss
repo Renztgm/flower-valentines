@@ -50,7 +50,7 @@ body {
   pointer-events: none;
   transform: translateY(2vmin) scale(0.98);
   transition: opacity 1.2s ease, transform 1.2s ease;
-  z-index: 30;
+  z-index: 1200;
 
   &.is-visible {
     opacity: 1;
