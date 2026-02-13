@@ -8,7 +8,7 @@ onload = () => {
   const yesButton = document.querySelector(".valentine-btn--yes");
   const noButton = document.querySelector(".valentine-btn--no");
   const actions = document.querySelector(".valentine-actions");
-  const gallery = document.querySelector(".valentine-gallery");
+  const floatingPhoto = document.querySelector(".valentine-photo-float");
   const messageDelayMs = 8000;
   const noReturnDelayMs = 1800;
 
@@ -18,9 +18,9 @@ onload = () => {
     }, messageDelayMs);
   }
 
-  if (yesButton && gallery && actions) {
+  if (yesButton && floatingPhoto && actions) {
     yesButton.addEventListener("click", () => {
-      gallery.classList.add("is-visible");
+      floatingPhoto.classList.add("is-visible");
       actions.classList.add("is-hidden");
     });
   }

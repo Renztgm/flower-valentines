@@ -62,8 +62,9 @@ body {
     font-size: clamp(2rem, 4vw, 4.5rem);
     letter-spacing: 0.02em;
     color: #fff6f8;
-    padding: 1.2rem 2.2rem;
-    border-radius: 3rem;
+    width: min(80vw, 520px);
+    padding: 1.4rem 2rem;
+    border-radius: 2.2rem;
     background: rgba(5, 8, 15, 0.35);
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 2vmin 4vmin rgba(0, 0, 0, 0.35);
@@ -72,7 +73,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.2rem;
+    gap: 0.9rem;
   }
 
   &__text {
@@ -130,11 +131,7 @@ body {
   }
 }
 
-.valentine-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 1.2rem;
-  width: min(70vw, 760px);
+.valentine-photo-float {
   opacity: 0;
   transform: translateY(1vmin) scale(0.98);
   pointer-events: none;
@@ -145,43 +142,27 @@ body {
     transform: translateY(0) scale(1);
     pointer-events: auto;
   }
-}
-
-.valentine-photo {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 0.6rem 0.6rem 1.1rem;
-  border-radius: 0.8rem;
-  box-shadow: 0 1.2rem 2.2rem rgba(0, 0, 0, 0.25);
-  transform: rotate(var(--angle, 0deg));
-  animation: float-photo 6s ease-in-out infinite;
-
-  &:nth-child(odd) {
-    --angle: -3deg;
-    animation-delay: -1.5s;
-  }
-
-  &:nth-child(even) {
-    --angle: 2deg;
-    animation-delay: -3s;
-  }
 
   img {
-    width: 100%;
-    height: 140px;
+    width: min(65vw, 360px);
+    height: auto;
+    aspect-ratio: 4 / 5;
     object-fit: cover;
-    border-radius: 0.5rem;
+    border-radius: 1.2rem;
     display: block;
+    box-shadow: 0 1.8rem 3rem rgba(0, 0, 0, 0.35);
+    animation: float-photo 6s ease-in-out infinite;
   }
 }
 
 @keyframes float-photo {
   0%,
   100% {
-    transform: translateY(0) rotate(var(--angle, 0deg));
+    transform: translateY(0) rotate(-2deg);
   }
 
   50% {
-    transform: translateY(-10px) rotate(calc(var(--angle, 0deg) * -1));
+    transform: translateY(-12px) rotate(2deg);
   }
 }
 
