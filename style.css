@@ -102,20 +102,12 @@ body {
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
 }
+  height: auto;
 .valentine-btn:hover {
   transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.25);
-}
-.valentine-btn--yes {
-  background: rgba(255, 118, 156, 0.2);
-  border-color: rgba(255, 118, 156, 0.6);
-}
-.valentine-btn--no {
-  background: rgba(255, 255, 255, 0.05);
-}
-.valentine-btn.is-shrinking {
-  transform: scale(0);
-  opacity: 0;
+  display: block;
+  box-shadow: 0 1.8rem 3rem rgba(0, 0, 0, 0.35);
+  animation: float-photo 6s ease-in-out infinite;
 }
 .valentine-btn.is-hidden {
   visibility: hidden;
@@ -124,10 +116,19 @@ body {
 
 .valentine-photo-float {
   display: none;
+  max-height: 55vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   opacity: 0;
   transform: translateY(1vmin) scale(0.98);
   pointer-events: none;
   transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.valentine-photo-float::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 .valentine-photo-float.is-visible {
   display: block;
@@ -138,7 +139,6 @@ body {
 .valentine-photo-float img {
   width: min(65vw, 360px);
   height: auto;
-  aspect-ratio: 4/5;
   object-fit: cover;
   border-radius: 1.2rem;
   display: block;
