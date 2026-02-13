@@ -79,6 +79,10 @@ body {
 
   &__text {
     text-align: center;
+
+    &.is-hidden {
+      display: none;
+    }
   }
 }
 

@@ -5,6 +5,7 @@ onload = () => {
   }, 1000);
 
   const message = document.querySelector(".valentine-message");
+  const messageText = document.querySelector(".valentine-message__text");
   const yesButton = document.querySelector(".valentine-btn--yes");
   const noButton = document.querySelector(".valentine-btn--no");
   const actions = document.querySelector(".valentine-actions");
@@ -22,6 +23,9 @@ onload = () => {
     yesButton.addEventListener("click", () => {
       floatingPhoto.classList.add("is-visible");
       actions.classList.add("is-hidden");
+      if (messageText) {
+        messageText.classList.add("is-hidden");
+      }
     });
   }
 
