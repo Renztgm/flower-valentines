@@ -50,7 +50,7 @@ body {
   pointer-events: none;
   transform: translateY(2vmin) scale(0.98);
   transition: opacity 1.2s ease, transform 1.2s ease;
-  z-index: 30;
+  z-index: 1200;
 }
 .valentine-message.is-visible {
   opacity: 1;
@@ -69,7 +69,7 @@ body {
   box-shadow: 0 2vmin 4vmin rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(6px);
   text-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.55);
-  width: min(88vw, 860px);
+  width: min(92vw, 560px);
   pointer-events: auto;
   display: flex;
   flex-direction: column;
@@ -162,6 +162,28 @@ body {
   object-fit: cover;
   border-radius: 0.5rem;
   display: block;
+}
+
+@media (max-width: 600px) {
+  .valentine-message__card {
+    font-size: clamp(1.5rem, 7vw, 2.6rem);
+    padding: 1rem 1.4rem;
+    border-radius: 2rem;
+  }
+
+  .valentine-btn {
+    font-size: 0.95rem;
+    padding: 0.5rem 1.2rem;
+  }
+
+  .valentine-gallery {
+    width: min(92vw, 520px);
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .valentine-photo img {
+    height: 120px;
+  }
 }
 
 @keyframes float-photo {
